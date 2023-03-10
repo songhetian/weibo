@@ -10880,3 +10880,8 @@ section.user_info h1, section.user_info .h1 {
   float: none;
   max-width: 100px;
 }
+
+.status-delete-btn {
+  width: -moz-max-content;
+  width: max-content;
+}
