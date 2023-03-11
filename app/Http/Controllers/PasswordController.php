@@ -59,6 +59,8 @@ class PasswordController extends Controller
     public function showResetForm(Request $request)
     {
         $token = $request->route()->parameter('token');
+
+        
         return view('auth.passwords.reset', compact('token'));
     }
 

@@ -10,6 +10,8 @@ class StaticPagesController extends Controller
 {
     public function home()
     {
+
+        echo  bcrypt("12345678");
         $feed_items = [];
 
         if (Auth::check()) {
