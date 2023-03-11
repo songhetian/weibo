@@ -75,7 +75,7 @@ class User extends Authenticatable
         if (!is_array($user_ids)) {
             $user_ids = compact('user_ids');
         }
-    
+
         $this->followings()->sync($user_ids, false);
     }
 
@@ -92,7 +92,7 @@ class User extends Authenticatable
     //判断用户是否关注了
     public function isFollowing($user_id)
     {
-        return $this->followings()->contains($user_id);
+        return $this->followings->contains($user_id);
     }
 
     public function followers()
