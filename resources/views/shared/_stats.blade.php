@@ -1,17 +1,16 @@
-<a href="#">
+<a href="{{ route('users.followings', Auth::user()) }}">
     <strong id="following" class="stat">
-        {{ $user->followings->count() }}
+        {{ count($user->followings) }}
     </strong>
     关注
 </a>
-<a href="#">
+<a href="{{ route('users.followers', Auth::user()) }}">
     <strong id="followers" class="stat">
-        {{ $user->followers->count() }}
-
+        {{ count($user->followers) }}
     </strong>
     粉丝
 </a>
-<a href="#">
+<a href="{{ route('users.show', $user->id) }}">
     <strong id="statuses" class="stat">
         {{ $user->statuses()->count() }}
     </strong>
